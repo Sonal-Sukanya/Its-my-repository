@@ -1,0 +1,205 @@
+
+/*:root{
+    --box-shadow:0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba( 90, 0, 0, 0.24);
+}
+*{
+    box-sizing:border-box;
+}
+img {
+    float: left;
+}
+ body{
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    height:100vh;
+ }
+ 
+ .container{
+    margin: 0;
+    width: 350px;
+ }
+ .title{
+    display: flex;
+    justify-content: space-evenly;
+ }
+ .timeline{
+   margin: 0;
+   width: 350px;
+ }
+
+ h1{
+    letter-spacing: 1px;
+    margin: 0;
+ }
+ h3{
+    border-bottom: 1px solid #bbb;
+ }
+ .exinfo{
+    margin: 10px auto;
+    width: 350px;
+    
+ }*/
+ :root {
+   --bg-color: #f9f9f9;  /* Light background for a cleaner look */
+   --primary-color: #1e2a3d; /* Darker text for clarity, matching the title color */
+   --secondary-color: #5a6a73; /* Lighter secondary text */
+   --accent-color: #ff6f61; /* Brighter accent color */
+   --btn-bg-color: #3498db; /* Brighter blue for buttons */
+   --btn-hover-color: #2980b9; /* Slightly darker hover color */
+   --border-color: #dcdcdc; /* Subtle borders */
+   --focus-color: #3498db; /* Blue focus color */
+}
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   background-color: var(--bg-color);
+   font-family: 'Arial', sans-serif;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+   min-height: 100vh;
+   color: var(--primary-color);  /* Darker text color for better readability */
+   line-height: 1.4;
+   padding: 10px;
+   overflow-y: auto; /* Prevent vertical scroll */
+}
+
+.title {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 20px;
+}
+
+.title img {
+   height: 70px;
+   margin-right: 10px;
+}
+
+h1 {
+   font-size: 26px;
+   color: var(--primary-color);
+   letter-spacing: 0.5px;
+   text-align: left;
+}
+
+.container, .exinfo {
+   width: 100%;
+   max-width: 320px;
+   background-color: #fff;
+   padding: 15px;
+   margin-bottom: 15px;
+   border-radius: 8px;
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+   font-size: 16px;
+   color: var(--secondary-color);
+   border-bottom: 1px solid var(--border-color);
+   padding-bottom: 5px;
+   margin-bottom: 10px;
+}
+
+form {
+   width: 100%;
+   margin-top: 10px; /* Reduced space above the form */
+}
+
+form .form-control {
+   margin-bottom: 10px;  /* Small space between the form controls */
+}
+
+form label {
+   font-size: 14px;
+   color: var(--primary-color);
+   display: block;
+   margin: 0; /* Removed any margin to eliminate space */
+}
+
+form input {
+   width: 100%;
+   padding: 8px;
+   font-size: 14px;
+   border: 1px solid var(--border-color);
+   border-radius: 5px;
+   background-color: #f9f9f9;
+   color: var(--primary-color);
+   margin: 0; /* Removed margin to ensure no space */
+   margin-bottom: 10px; /* Space between inputs */
+}
+
+form input:focus {
+   outline: none;
+   border-color: var(--focus-color);  /* Blue border when focused */
+   box-shadow: 0 0 5px var(--focus-color);  /* Optional: Light blue shadow for focus effect */
+}
+
+button.btn {
+   width: 100%;
+   padding: 10px;
+   font-size: 15px;
+   color: #fff;
+   background-color: var(--btn-bg-color);
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+button.btn:hover {
+   background-color: var(--btn-hover-color);
+}
+
+ul.list {
+   list-style-type: none;
+   padding: 0;
+   margin: 15px 0;
+}
+
+ul.list li {
+   background-color: #fff;
+   padding: 8px;
+   margin: 5px 0;
+   border-radius: 5px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   font-size: 14px;
+   color: var(--primary-color);
+}
+
+ul.list li.plus {
+   border-left: 5px solid var(--btn-bg-color);
+}
+
+ul.list li.minus {
+   border-left: 5px solid #e74c3c;
+}
+
+button.delete-btn {
+   background-color: #e74c3c;
+   color: white;
+   border: none;
+   padding: 5px 10px;
+   font-size: 12px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.2s;
+}
+
+button.delete-btn:hover {
+   background-color: #c0392b;
+}
+
